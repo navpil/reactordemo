@@ -51,6 +51,7 @@ public class ReactorTest {
 
         //Mono is not reevaluated!!! Use Mono.defer()
         Mono.defer(() -> userRepository.getUser())
+//        userRepository.getUser()
                 .map(User::getName)
                 //If you don't remember this API, you can always switch to map()
                 .doOnNext(name -> LOG.info("Got User " + name))

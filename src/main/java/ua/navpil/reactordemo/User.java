@@ -4,7 +4,6 @@ public class User {
 
     public String id;
     public String name;
-
     private String manager;
 
     public User() {
