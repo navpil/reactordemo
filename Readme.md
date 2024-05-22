@@ -21,7 +21,8 @@ Example: we could not add an OAuth server inside a reactive application.
 
 ## What is monad
 
-Schroedinger monad (similar to Optional, Completable Future, List (though a strange case for monad))
+Schroedinger monad (similar to Optional, Completable Future, List (though a strange case for monad)).
+It's similar to Schroedinger cat - it's inside the box, we do not know its state, unless we observe (for example by `.get()`), but we can do operations on it.
 
 Most important: 
  - Mono.just(),
@@ -48,7 +49,9 @@ Transforming Flux to Mono
 
 ### Subscribe
 
-What is subscribe, what is subscribeOn and what is publishOn
+What is subscribe, what is subscribeOn and what is publishOn.
+Subscribe is called under the hood by WebFlux.
+But if you want to change the thread of execution, you may use `subscribeOn` which applies to all the execution (from start) or `publishOn` which applies only to the next operations.
 
 How to do the blocking calls:
 https://egkatzioura.com/2021/10/11/executing-blocking-calls-on-a-reactor-based-application/
